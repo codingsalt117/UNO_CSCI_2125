@@ -49,19 +49,16 @@ public class Clock<AnyType>{
      * @param balls number of ball specified to go into QueueTrack
      */
     public void queueLoadBall(int balls){
-
-        int loadNumber = balls;
-        Ball[] ballList = new Ball[loadNumber];
         
-        for (int i=0; i<loadNumber; i++) {
-            ballList[i] = new Ball(i);
-        }
-
+        int loadNumber = balls;
+        
         //fill queue with inputed number of balls
         for (int i = 0; i < loadNumber; i++) {
-            this.ballReturn.enqueue(ballList[i]);
+            this.ballReturn.enqueue(new Ball(i));
+            //System.out.println(ballReturn.getData());
         }
         queueComapare = this.ballReturn;
+        //System.out.println(queueComapare.getData());
     }
     /**
      * Method returns the number of balls bein g used in clock
@@ -86,6 +83,8 @@ public class Clock<AnyType>{
             if (minuteTrack.size() < 4) {    
                 minuteTrack.push(ballReturn.peek());
                 ballReturn.dequeue();
+                //System.out.println(ballReturn.getData());
+                //System.out.println(minuteTrack.getData());
             }
 
             else {
