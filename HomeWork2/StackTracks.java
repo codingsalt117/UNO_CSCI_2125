@@ -60,6 +60,9 @@ public class StackTracks<AnyType>{
     public int size(){
         return this.size; 
     }
+    public Object getData(){
+        return data;
+    }
     /**
      * Method returns the element from the top of the stack
      */

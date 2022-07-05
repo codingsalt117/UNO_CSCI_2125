@@ -56,6 +56,10 @@ public class QueueTrack<AnyType>{
     public AnyType peek(){
         return data.get(0);
     }
+
+    public AnyType peekIndex(int index){
+        return data.get(index);
+    }
     /**
      * Method returns an int size of a QueueTrack
      */    
@@ -78,7 +82,7 @@ public class QueueTrack<AnyType>{
         if (object instanceof QueueTrack){
             QueueTrack a = (QueueTrack) object;
                 //checking if the data is the same
-                if (getData() == a.getData()){
+                if (getData().equals(a.getData())){
                     return true;
                 }
            

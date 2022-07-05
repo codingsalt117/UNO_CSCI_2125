@@ -13,7 +13,7 @@ public class Ball{
 	public int ballNum;
     /**
      * Ball constructor makes a ball object with an int variable of number
-     * @param number is an int representing a ball number
+     * @param number is an int representing a ball
      */
 	public Ball(int number){
 
@@ -31,7 +31,7 @@ public class Ball{
     /**
      * Returns a string rep of int balNum
      */
-	public String toStrting(){
+	public String toString(){
 		
 		String returnBallNum = "";
 		returnBallNum = returnBallNum + ballNum;
