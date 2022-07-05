@@ -171,7 +171,7 @@ public class Clock<AnyType>{
     @Override
     public String toString(){
         
-         return((queueComapare.size() + 1)+ " balls cycle after " + dayCount + " days");
+         return(getNumOfballs()) + " balls cycle after " + dayCount + " days");
     }
 }
     
