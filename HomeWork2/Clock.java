@@ -57,7 +57,7 @@ public class Clock<AnyType>{
             this.ballReturn.enqueue(new Ball(i));
             //System.out.println(ballReturn.getData());
         }
-        queueComapare = this.ballReturn;
+        queueComapare.setData(this.ballReturn.getData());     
         //System.out.println(queueComapare.getData());
     }
     /**
@@ -171,7 +171,7 @@ public class Clock<AnyType>{
     @Override
     public String toString(){
         
-         return(getNumOfballs()) + " balls cycle after " + dayCount + " days");
+         return(getNumOfballs()+ " balls cycle after " + dayCount + " days");
     }
 }
     
