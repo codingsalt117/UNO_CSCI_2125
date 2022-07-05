@@ -69,8 +69,15 @@ public class QueueTrack<AnyType>{
     /**
      * Method returns the data of the QueueTrack
      */    
-    public Object getData(){
+    public ArrayList<AnyType> getData(){
         return data;
+    }
+
+    public void setData(ArrayList<AnyType> data) {
+        this.data = new ArrayList<AnyType>();
+        for (int i = 0; i < data.size(); i++) {
+            this.data.add(data.get(i));
+        }
     }
     /**
      * Overrided method to return a boolean if the the calling object is equal to passed object
