@@ -3,7 +3,7 @@
  * Verion - 1.0
  * 
  * Discription:
- * 				Class 
+ * 				Class controls all the functions of generation of lists of various Types based on N amount of data
  * 
  */
 import java.util.Queue;
