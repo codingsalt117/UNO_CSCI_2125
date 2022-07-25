@@ -24,22 +24,22 @@ public class Main{
 
 		Queue<Integer> nValues = new LinkedList<Integer>();
 		Queue<Integer> nValues2 = new LinkedList<Integer>();
-        nValues.add(1000);
-        nValues.add(10000);
         nValues.add(25000);
         nValues.add(75000);
         nValues.add(125000);
-        nValues.add(250000);
         nValues.add(500000);
         nValues.add(1000000);
-        nValues2.add(1000);
-        nValues2.add(10000);
+        nValues.add(1500000);
+        nValues.add(2000000);
+        nValues.add(3000000);
         nValues2.add(25000);
         nValues2.add(75000);
         nValues2.add(125000);
-        nValues2.add(250000);
         nValues2.add(500000);
         nValues2.add(1000000);
+        nValues2.add(1500000);
+        nValues2.add(2000000);
+        nValues2.add(3000000);
 
         String nValuesOutput = nValues.toString();
         System.out.println(" Values of N ");

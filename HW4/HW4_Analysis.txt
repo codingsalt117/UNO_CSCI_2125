@@ -1,0 +1,11 @@
+Robin Johnson
+Homework 4 Analyze Work-Up
+
+When looking at the two different algorithms concerning how the data is organized before inserting or building a heap does make a difference. It seems that with no difference
+to the method of creating the heap, using data that is in a natural order is the fastest, and the slowest in adding one by one is the reversed ordered list and when using build heap
+randomly ordered data seems to be the slowest in larger amounts of data. 
+
+Overall, the algorithm that fills a heap one by one is the slowest overall but with data amounts less than  1 mil it is almost on par with buildHeap. Once reaching 1 mil data points
+ and above the speed is affected greatly.  Using buildHeap is the fastest because of the constant time for insert and an average of linear O(N) time of the method. Where as the method of inserting data items one by one is 
+O(logN), and when large data amounts are used, the larger the data the faster the growth of time it takes to process grows.
+
