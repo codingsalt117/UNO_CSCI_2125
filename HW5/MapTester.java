@@ -20,7 +20,7 @@ import org.junit.Test;
 
 public class MyGraphTester{
 
-	private MyGraph<AnyType> graph1;
+
 	
 	/**
 	 * Method for setting up the enviorment of the tests
@@ -28,7 +28,6 @@ public class MyGraphTester{
 	 */
 	@Before
 	public void setUp(){
-		
 
 	}
 	/**

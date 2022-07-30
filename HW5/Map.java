@@ -12,7 +12,7 @@ import java.util.*;
 public class Map<KeyType, ValueType>{
 
 	private SeparateChainingHashTable<MapEntry<KeyType,ValueType>> elements;
-	private int size = 0;// # of key value pairs
+	private int size;// # of key value pairs
 	//private int numbuckets; // cap
 
     /**
