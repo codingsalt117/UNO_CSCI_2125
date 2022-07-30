@@ -13,14 +13,17 @@ import java.util.*;
 public class MyGraph<AnyType extends Comparable> {
 
     // instance variables for the graph should definitely go here
-    private Map<Integer, Vertex> myMap = new Map<Integer,Vertex>();
+    private Map<String, Vertex> myMap; 
+    String name;
 
     /**
         constructor
     */
-    public MyGraph(Map<Integer,Vertex> mapName) {
+    public MyGraph(Map<String,Vertex> mapName) {
         // stubbed
-        this. myMap = mapName;
+        this.myMap = new Map<String,Vertex>();
+        this.name = mapName;
+        
     }
 
     /**
@@ -102,7 +105,7 @@ public class MyGraph<AnyType extends Comparable> {
         for ( int i = 0; i <= currentSize; i++){
             Vertex startVertex = garbageDay.get(i); 
             Vertex endVertex = garbageDay.get(i+1);
-            this.myMap.removeEdge(startVertex.getName(), endVertex.getName());
+            this.removeEdge(startVertex.getName(), endVertex.getName());
         }   
         
     }
@@ -115,7 +118,7 @@ public class MyGraph<AnyType extends Comparable> {
     public void removeEdge(Vertex<AnyType> v, Vertex<AnyType> w) {
 
         // stubbed
-
+        
     }
 
     /**
@@ -126,7 +129,7 @@ public class MyGraph<AnyType extends Comparable> {
     public void removeEdge(AnyType nameOf_v, AnyType nameOf_w) {
 
         // stubbed
-
+        
     }
 
 } // end class MyGraph
