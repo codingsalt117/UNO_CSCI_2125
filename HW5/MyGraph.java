@@ -67,8 +67,9 @@ public class MyGraph<AnyType extends Comparable> {
     */
     public Vertex getVertex(AnyType name) {
         // stubbed
-            
-            return null;
+            Vertex returnVertex = new Vertex(name);
+            returnVertex = this.myMap.get(returnVertex.hashCode());
+            return returnVertex;
         }
 
     /**
@@ -81,8 +82,9 @@ public class MyGraph<AnyType extends Comparable> {
         // begin or end at that vertex must also be removed
 
 
-    }
 
+    }
+//returnVertex.removeAdjacentVertex(this.getVertex(name));
     /**
         remove a vertex from the graph with a particular "name"
         @param  name  the "name" or label of the vertex to be removed
@@ -92,7 +94,17 @@ public class MyGraph<AnyType extends Comparable> {
         // stubbed
         // remember that if a vertex is removed all edges that either
         // begin or end at that vertex must also be removed
-
+        Vertex removingVertex = new Vertex(name);
+        removingVertex = this.myMap.get(removingVertex.hashCode());       
+        List<Vertex<AnyType>> garbageDay = removingVertex.getAdjacencyList();
+        int currentSize = garbageDay.size();
+        
+        for ( int i = 0; i <= currentSize; i++){
+            Vertex startVertex = garbageDay.get(i); 
+            Vertex endVertex = garbageDay.get(i+1);
+            this.myMap.removeEdge(startVertex.getName(), endVertex.getName());
+        }   
+        
     }
 
     /**
